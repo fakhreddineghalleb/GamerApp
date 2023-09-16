@@ -39,5 +39,11 @@
     <string name="item_store">Store</string>
     <string name="item_profile">Profile</string>
 
+    <!--  ErrorsMessages  -->
+    <string name="msg_must_not_be_empty">Must not be empty!</string>
+    <string name="msg_check_your_email">Must be a valid email!</string>
+    <string name="msg_check_your_characters">Must be a at least 6 characters!</string>
+    <string name="msg_check_your_confirm_Password">Must be the same password!</string>
+    <string name="msg_error_inputs">You Have some errors in your inputs!</string>
 
 </resources>

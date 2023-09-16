@@ -40,6 +40,11 @@
         <item name="colorOnSecondaryContainer">@color/colorPrimary</item>
         <item name="colorSecondaryContainer">@color/colorPrimaryLight</item>
 
+        <item name="colorError">@color/red</item>
+        <item name="colorErrorContainer">@color/red</item>
+        <item name="colorOnError">@color/red</item>
+        <item name="colorOnErrorContainer">@color/red</item>
+
         <!--        <item name="colorPrimaryContainer">@color/colorPrimary</item>-->
         <!--        <item name="colorOnPrimaryContainer">@color/colorPrimary</item>-->
         <!--        <item name="colorSecondary">@color/colorPrimary</item>-->
@@ -48,12 +53,8 @@
         <!--        <item name="colorOnTertiary">@color/colorPrimary</item>-->
         <!--        <item name="colorTertiaryContainer">@color/colorPrimary</item>-->
         <!--        <item name="colorOnTertiaryContainer">@color/colorPrimary</item>-->
-        <!--        <item name="colorError">@color/colorPrimary</item>-->
-        <!--        <item name="colorErrorContainer">@color/colorPrimary</item>-->
-        <!--        <item name="colorOnError">@color/colorPrimary</item>-->
-        <!--        <item name="colorOnErrorContainer">@color/colorPrimary</item>-->
+
         <!--        <item name="colorOnBackground">@color/colorPrimary</item>-->
-        <!--        <item name="colorSurfaceInverse">@color/black</item>-->
 
     </style>
     <!-- Base application theme. -->
