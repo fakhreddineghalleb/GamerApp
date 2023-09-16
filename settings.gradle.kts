@@ -13,5 +13,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "Gaming Store"
+rootProject.name = "Gamer"
 include(":app")
