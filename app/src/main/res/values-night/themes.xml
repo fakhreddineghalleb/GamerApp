@@ -1,0 +1,68 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.Material3.Dark.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryVariant">@color/white</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/white</item>
+        <item name="colorSecondaryVariant">@color/white</item>
+        <item name="colorOnSecondary">@color/white</item>
+
+        <item name="colorOutline">@color/colorPrimary</item>
+        <item name="colorOnSurfaceVariant">@color/white</item>
+        <item name="colorOnBackground">@color/white</item>
+
+        <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
+    </style>
+
+    <style name="Theme.App.Starting" parent="Theme.SplashScreen">
+        <item name="windowSplashScreenBackground">@color/colorSecondary</item>
+        <item name="windowSplashScreenAnimatedIcon">@mipmap/ic_launcher_foreground</item>
+        <item name="postSplashScreenTheme">@style/M3.AppTheme</item>
+    </style>
+
+    <style name="M3.AppTheme" parent="Theme.Material3.Dark.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="android:colorBackground">@color/colorSecondary</item>
+        <item name="colorSurface">@color/colorPrimary</item>
+        <item name="colorOnSurfaceVariant">@color/white</item>
+        <item name="colorOutline">@color/colorPrimary</item>
+        <item name="android:textColorHighlight">@color/colorPrimary</item>
+        <item name="colorOnSurface">@color/white</item>
+        <item name="android:forceDarkAllowed" tools:targetApi="q">false</item>
+
+        <item name="colorOnSurfaceInverse">@color/white</item>
+        <item name="colorPrimaryInverse">@color/colorSecondary</item>
+        <item name="colorSurfaceInverse">@color/colorPrimaryOverLay</item>
+
+        <item name="colorSurfaceVariant">@color/colorSecondary</item>
+        <item name="colorOnSecondaryContainer">@color/white</item>
+        <item name="colorSecondaryContainer">@color/colorSecondaryLight</item>
+
+        <!--        <item name="colorPrimaryContainer">@color/black</item>-->
+        <!--        <item name="colorOnPrimaryContainer">@color/black</item>-->
+        <!--        <item name="colorSecondary">@color/black</item>-->
+        <!--        <item name="colorOnSecondary">@color/black</item>-->
+        <!--        <item name="colorSecondaryContainer">@color/black</item>-->
+        <!--        <item name="colorOnSecondaryContainer">@color/black</item>-->
+        <!--        <item name="colorTertiary">@color/black</item>-->
+        <!--        <item name="colorOnTertiary">@color/black</item>-->
+        <!--        <item name="colorTertiaryContainer">@color/black</item>-->
+        <!--        <item name="colorOnTertiaryContainer">@color/black</item>-->
+        <!--        <item name="colorError">@color/black</item>-->
+        <!--        <item name="colorErrorContainer">@color/black</item>-->
+        <!--        <item name="colorOnError">@color/black</item>-->
+        <!--        <item name="colorOnErrorContainer">@color/black</item>-->
+        <!--        <item name="colorOnBackground">@color/black</item>-->
+        <!--        <item name="colorOnSurface">@color/black</item>-->
+        <!--        <item name="colorSurfaceVariant">@color/black</item>-->
+
+    </style>
+    <!-- Base application theme. -->
+    <style name="Base.M3.AppTheme" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your dark theme here. -->
+        <!-- <item name="colorPrimary">@color/my_dark_primary</item> -->
+    </style>
+</resources>
