@@ -11,11 +11,13 @@ import com.google.android.material.snackbar.Snackbar
 import tn.esprit.gamer.R
 import tn.esprit.gamer.databinding.ActivityForgetPasswordBinding
 import tn.esprit.gamer.databinding.ActivityLoginBinding
+import tn.esprit.gamer.utils.MyStatics
 import tn.esprit.gamer.utils.OTP_EMAIL
 import tn.esprit.gamer.utils.OTP_MOBILE
 
 class ForgetPasswordActivity : AppCompatActivity() {
-    lateinit var binding: ActivityForgetPasswordBinding
+
+    private lateinit var binding: ActivityForgetPasswordBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -24,6 +26,7 @@ class ForgetPasswordActivity : AppCompatActivity() {
         val contextView = findViewById<View>(R.id.context_view)
 
         binding.tiEmail.addTextChangedListener(object : TextWatcher {
+
             override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
                 return
             }
@@ -42,6 +45,7 @@ class ForgetPasswordActivity : AppCompatActivity() {
         }
 
         binding.btnSubmit.setOnClickListener {
+            MyStatics.hideKeyboard(this, binding.btnSubmit)
             if (validateEmail()){
                 startActivity(Intent(this, OtpValidationActivity::class.java).apply {
                     putExtra(OTP_EMAIL, 1234)

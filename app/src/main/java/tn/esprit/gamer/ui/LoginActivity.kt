@@ -3,10 +3,13 @@ package tn.esprit.gamer.ui
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.os.Handler
+import android.os.Looper
 import android.text.Editable
 import android.text.TextWatcher
 import android.util.Patterns
 import android.view.View
+import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import com.google.android.material.snackbar.Snackbar
 import tn.esprit.gamer.R
 import tn.esprit.gamer.databinding.ActivityLoginBinding
@@ -14,13 +17,21 @@ import tn.esprit.gamer.utils.MyStatics
 
 class LoginActivity : AppCompatActivity() {
 
-    lateinit var binding: ActivityLoginBinding
+    private lateinit var binding: ActivityLoginBinding
+    private var keep: Boolean = true
 
     override fun onCreate(savedInstanceState: Bundle?) {
+
+        val splashScreen = installSplashScreen()
         super.onCreate(savedInstanceState)
+        splashScreen.setKeepOnScreenCondition { keep }
+        Handler(Looper.getMainLooper()).postDelayed({
+            keep = false
+        }, 1000)
+
         binding = ActivityLoginBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        val contextView = findViewById<View>(R.id.context_view)
+        val contextView = binding.contextView
 
         binding.tiEmail.addTextChangedListener(object : TextWatcher {
             override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
@@ -55,7 +66,11 @@ class LoginActivity : AppCompatActivity() {
             if (validateEmail() && validatePassword()){
                 startActivity(Intent(this, HomeActivity::class.java))
             }else{
-                Snackbar.make(contextView, getString(R.string.msg_error_inputs), Snackbar.LENGTH_SHORT).show()
+                Snackbar.make(binding.contextView, getString(R.string.msg_error_inputs), Snackbar.LENGTH_SHORT)
+//                    .setAction("ACTION") {
+//                        // Responds to click on the action
+//                    }
+                    .show()
             }
         }
 
@@ -64,17 +79,26 @@ class LoginActivity : AppCompatActivity() {
         }
 
         binding.btnFacebookLogin.setOnClickListener {
-            Snackbar.make(contextView, getString(R.string.msg_coming_soon), Snackbar.LENGTH_SHORT).show()
+            Snackbar.make(contextView, getString(R.string.msg_coming_soon), Snackbar.LENGTH_SHORT)
+//                .setAction("ACTION") {
+//                    // Responds to click on the action
+//                }
+                .show()
         }
 
         binding.btnGoogleLogin.setOnClickListener {
-            Snackbar.make(contextView, getString(R.string.msg_coming_soon), Snackbar.LENGTH_SHORT).show()
+            Snackbar.make(contextView, getString(R.string.msg_coming_soon), Snackbar.LENGTH_SHORT)
+//                .setAction("ACTION") {
+//                    // Responds to click on the action
+//                }
+                .show()
         }
 
         binding.btnCreateAccount.setOnClickListener {
             startActivity(Intent(this, SignUpActivity::class.java))
         }
 
+        startActivity(Intent(this, HomeActivity::class.java))
     }
 
     private fun validateEmail(): Boolean {
@@ -120,4 +144,5 @@ class LoginActivity : AppCompatActivity() {
 
         return true
     }
+
 }

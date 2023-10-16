@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_bottom_bar"
+    app:startDestination="@+id/item_news">
+
+    <fragment
+        android:id="@+id/item_news"
+        android:name="tn.esprit.gamer.ui.fragments.NewsFragment"
+        android:label="@string/item_news"
+        tools:layout="@layout/fragment_news" />
+
+    <fragment
+        android:id="@+id/item_store"
+        android:name="tn.esprit.gamer.ui.fragments.StoreFragment"
+        android:label="@string/item_store"
+        tools:layout="@layout/fragment_store" />
+
+    <fragment
+        android:id="@+id/item_profile"
+        android:name="tn.esprit.gamer.ui.fragments.ProfileFragment"
+        android:label="@string/item_profile"
+        tools:layout="@layout/fragment_profile" />
+
+</navigation>

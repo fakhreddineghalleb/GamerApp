@@ -2,10 +2,10 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:id="@+id/item_home"
+        android:id="@+id/item_news"
         android:enabled="true"
-        android:icon="@drawable/ic_home"
-        android:title="@string/item_home"/>
+        android:icon="@drawable/ic_newspaper"
+        android:title="@string/item_news"/>
     <item
         android:id="@+id/item_store"
         android:enabled="true"
